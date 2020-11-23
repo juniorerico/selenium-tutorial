@@ -7,6 +7,7 @@ public class HomePage {
 	private WebDriver driver;
 	
 	private By linkFormAuthentication = By.linkText("Form Authentication");
+	private By linkHover = By.linkText("Hovers");
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -14,5 +15,9 @@ public class HomePage {
 	
 	public void clickFormAuthentication() {
 		driver.findElement(linkFormAuthentication).click();
+	}
+	
+	public void clickHovers() {
+		driver.findElement(linkHover).click();
 	}
 }

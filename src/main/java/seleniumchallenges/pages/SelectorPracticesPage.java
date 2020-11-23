@@ -12,6 +12,7 @@ public class SelectorPracticesPage {
 	private WebDriver driver;
 	
 	private By productCard = By.className("card");
+	private By result = By.id("result-4");
 	
 	public SelectorPracticesPage(WebDriver driver) {
 		this.driver = driver;
@@ -27,5 +28,9 @@ public class SelectorPracticesPage {
 				card.buy();
 			}
 		}
+	}
+	
+	public String getResult() {
+		return driver.findElement(result).getText();
 	}
 }
